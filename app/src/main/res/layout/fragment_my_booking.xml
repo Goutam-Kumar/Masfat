@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.mobile.masfat.customwidget.BoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dim_20sp"
+            android:textColor="@color/black"
+            android:text="Avenues Mall"
+            android:gravity="center_horizontal"
+            android:layout_margin="@dimen/dim_20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dim_150dp"
+                android:layout_height="@dimen/dim_50dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_white_btn">
+                <ImageView
+                    android:layout_width="@dimen/dim_40dp"
+                    android:layout_height="@dimen/dim_40dp"
+                    android:background="@drawable/orange_circle"
+                    android:layout_marginLeft="@dimen/dim_5dp"
+                    android:src="@drawable/qr"/>
+                <com.mobile.masfat.customwidget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/dim_12sp"
+                    android:layout_marginLeft="@dimen/dim_10dp"
+                    android:text="@string/scan_qr_code"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorPrimary"
+            android:weightSum="2">
+            <com.mobile.masfat.customwidget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_30dp"
+                android:layout_weight="1"
+                android:text="@string/arrival"
+                android:textSize="@dimen/dim_13sp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <com.mobile.masfat.customwidget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dim_30dp"
+                android:layout_weight="1"
+                android:text="@string/departure"
+                android:textSize="@dimen/dim_13sp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <com.mobile.masfat.customwidget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/top_corner_orange"
+                android:padding="@dimen/dim_20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_15sp"
+                android:text="12:00 PM \n Mon, Feb 2019" />
+            <com.mobile.masfat.customwidget.RegularTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/top_left_corner_orange"
+                android:padding="@dimen/dim_20dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim_15sp"
+                android:text="3:00 PM \n Mon, Feb 2019"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dim_10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_100dp"
+                android:layout_marginTop="@dimen/dim_5dp"
+                android:weightSum="2">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_personal_info"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/bg_color"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="@dimen/dim_10dp"
+                    app:cardPreventCornerOverlap="false"
+                    android:layout_marginRight="@dimen/dim_2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gray_border_box"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.mobile.masfat.customwidget.BoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dim_18sp"
+                            android:textColor="@color/colorPrimary"
+                            android:text="02:00"/>
+
+                        <com.mobile.masfat.customwidget.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/count_down"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dim_5dp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/acc_info"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dim_2dp"
+                    app:cardBackgroundColor="@color/bg_color"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="@dimen/dim_10dp"
+                    app:cardPreventCornerOverlap="false">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gray_border_box"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim_30dp"
+                            android:layout_height="@dimen/dim_30dp"
+                            android:src="@drawable/extend_icon"/>
+
+                        <com.mobile.masfat.customwidget.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/extend_time"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dim_5dp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_100dp"
+                android:weightSum="2"
+                android:layout_marginTop="@dimen/dim_5dp">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_topup"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/bg_color"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="@dimen/dim_10dp"
+                    app:cardPreventCornerOverlap="false"
+                    android:layout_marginRight="@dimen/dim_2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gray_border_box"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim_30dp"
+                            android:layout_height="@dimen/dim_30dp"
+                            android:src="@drawable/share"/>
+
+                        <com.mobile.masfat.customwidget.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/share_booking"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dim_5dp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_booking_history"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dim_2dp"
+                    app:cardBackgroundColor="@color/bg_color"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="@dimen/dim_10dp"
+                    app:cardPreventCornerOverlap="false">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gray_border_box"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dim_30dp"
+                            android:layout_height="@dimen/dim_30dp"
+                            android:src="@drawable/search"/>
+
+                        <com.mobile.masfat.customwidget.RegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/find_my_spot"
+                            android:textColor="@color/black"
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dim_5dp"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_destination"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_55dp"
+                android:background="@drawable/btn_orange_bg"
+                android:layout_marginTop="@dimen/dim_30dp"
+                android:drawableLeft="@drawable/ic_navigation1"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_navigation1"
+                    android:layout_marginRight="@dimen/dim_5dp"/>
+                <com.mobile.masfat.customwidget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/direction"
+                    android:textSize="@dimen/dim_16sp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_cancel_booking"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_55dp"
+                android:background="@drawable/btn_orange_bg"
+                android:layout_marginTop="@dimen/dim_30dp"
+                android:drawableLeft="@drawable/ic_navigation1"
+                android:gravity="center"
+                android:layout_gravity="center">
+                <com.mobile.masfat.customwidget.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/cancel_booking"
+                    android:textSize="@dimen/dim_16sp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

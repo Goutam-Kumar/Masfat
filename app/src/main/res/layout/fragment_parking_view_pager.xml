@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_50dp"
+        android:padding="@dimen/dim_10dp"
+        android:background="@color/white">
+        <com.mobile.masfat.customwidget.RegularEditText
+            android:id="@+id/txt_destination"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="@string/search"
+            android:textColorHint="@color/border_gray"
+            android:textSize="@dimen/dim_15sp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="@dimen/dim_5dp"/>
+    </RelativeLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager_parking"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

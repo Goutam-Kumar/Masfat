@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screens.login.LoginActivity"
+    android:background="@color/bg_color"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+
+    <ImageView
+        android:layout_width="@dimen/dim_200dp"
+        android:layout_height="@dimen/dim_200dp"
+        android:src="@drawable/logo"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_15dp"
+        app:cardElevation="@dimen/dim_5dp"
+        app:cardCornerRadius="@dimen/dim_5dp"
+        app:cardPreventCornerOverlap="false"
+        android:descendantFocusability="beforeDescendants">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.mobile.masfat.customwidget.BoldTextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_40dp"
+                android:text="@string/sign_in"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim_15sp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_1dp"
+                android:background="@color/seperator_gray"/>
+
+            <com.mobile.masfat.customwidget.RegularEditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_45dp"
+                android:background="@drawable/gray_border_box"
+                android:layout_margin="@dimen/dim_20dp"
+                android:textSize="@dimen/dim_15sp"
+                android:padding="@dimen/dim_10dp"
+                android:hint="@string/email_h"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/border_gray"
+                android:textColor="@color/colorAccent"
+                android:maxLines="1"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <com.mobile.masfat.customwidget.RegularEditText
+                android:id="@+id/txt_password"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_45dp"
+                android:background="@drawable/gray_border_box"
+                android:layout_marginLeft="@dimen/dim_20dp"
+                android:layout_marginRight="@dimen/dim_20dp"
+                android:textSize="@dimen/dim_15sp"
+                android:padding="@dimen/dim_10dp"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:textColorHint="@color/border_gray"
+                android:textColor="@color/colorAccent"
+                android:maxLines="1"
+                android:focusable="true"
+                android:clickable="true"/>
+            
+            <com.mobile.masfat.customwidget.BoldButton
+                android:id="@+id/btn_signin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_45dp"
+                android:background="@drawable/btn_blue_bg"
+                android:layout_margin="@dimen/dim_20dp"
+                android:textColor="@color/white"
+                android:text="@string/sign_in"
+                android:textSize="@dimen/dim_16sp"
+                android:textAllCaps="false"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.mobile.masfat.customwidget.BoldButton
+        android:id="@+id/btn_signup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_45dp"
+        android:background="@drawable/btn_orange_bg"
+        android:layout_marginLeft="@dimen/dim_35dp"
+        android:layout_marginRight="@dimen/dim_35dp"
+        android:layout_marginTop="@dimen/dim_10dp"
+        android:textColor="@color/white"
+        android:text="@string/sign_up"
+        android:textSize="@dimen/dim_16sp"
+        android:textAllCaps="false"
+        android:gravity="center"/>
+
+    <com.mobile.masfat.customwidget.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connect"
+        android:textSize="@dimen/dim_15sp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="@dimen/dim_35dp"
+        android:layout_marginRight="@dimen/dim_35dp"
+        android:layout_marginTop="@dimen/dim_35dp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="@dimen/dim_50dp"
+        android:layout_height="@dimen/dim_20dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dim_10dp"
+        android:weightSum="2">
+
+        <ImageView
+            android:id="@+id/img_facebook"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dim_20dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_facebook"/>
+        <ImageView
+            android:id="@+id/img_google"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dim_20dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_google_plus"/>
+    </LinearLayout>
+
+</LinearLayout>

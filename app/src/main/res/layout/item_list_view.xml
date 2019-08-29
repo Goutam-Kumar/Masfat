@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_250dp">
+
+            <ImageView
+                android:id="@+id/img_parking"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_250dp"
+                android:layout_marginTop="@dimen/dim_5dp"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/img_parking_info"
+                android:layout_width="@dimen/dim_20dp"
+                android:layout_height="@dimen/dim_20dp"
+                android:src="@drawable/ic_information"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/dim_20dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_250dp"
+            android:background="@drawable/black_gradient"/>
+
+        <LinearLayout
+            android:id="@+id/lin_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dim_20dp"
+            android:layout_marginRight="@dimen/dim_20dp"
+            android:layout_marginLeft="@dimen/dim_20dp"
+            android:weightSum="2">
+
+            <com.mobile.masfat.customwidget.BoldTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/dim_15sp"
+                android:textColor="@color/white"/>
+            <com.mobile.masfat.customwidget.BoldTextView
+                android:id="@+id/txt_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/dim_15sp"
+                android:textColor="@color/white"
+                android:text="15 Minutes"
+                android:gravity="right"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dim_40dp"
+            android:layout_marginRight="@dimen/dim_20dp"
+            android:layout_marginLeft="@dimen/dim_20dp"
+            android:weightSum="2">
+
+            <com.mobile.masfat.customwidget.BoldTextView
+                android:id="@+id/txt_parking_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/dim_18sp"
+                android:textColor="@color/white"
+                android:text="Avenues Mall"/>
+            <com.mobile.masfat.customwidget.BoldTextView
+                android:id="@+id/txt_distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/dim_15sp"
+                android:textColor="@color/white"
+                android:text="5km"
+                android:gravity="right"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

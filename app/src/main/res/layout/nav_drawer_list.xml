@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:paddingLeft="@dimen/dim_40dp"
+    android:paddingTop="@dimen/dim_40dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dim_40dp"
+            android:background="@color/white"/>
+
+        <com.mobile.masfat.customwidget.RegularTextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dim_15sp"
+            android:text="SALWA KHORY"
+            android:layout_marginLeft="@dimen/dim_5dp"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>
+    <com.mobile.masfat.customwidget.RegularTextView
+        android:id="@+id/txt_user_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/border_gray"
+        android:textSize="@dimen/dim_12sp"
+        android:text="abcd@gmail.com"
+        android:layout_marginLeft="@dimen/dim_5dp"
+        android:layout_gravity="bottom"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_drawer_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dim_40dp"/>
+</LinearLayout>

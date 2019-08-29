@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/user_ic"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+        <com.mobile.masfat.customwidget.RegularEditText
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/transparent_box"
+            android:text="Abdullah Ahmad"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_1dp"
+        android:background="@color/border_gray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/mail"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+        <com.mobile.masfat.customwidget.RegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/transparent_box"
+            android:text="abdullah@gmail.com"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_1dp"
+        android:background="@color/border_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/mobile"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+        <com.mobile.masfat.customwidget.RegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/transparent_box"
+            android:text="+91 1234 000 000"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_1dp"
+        android:background="@color/border_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/user_ic"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+        <com.mobile.masfat.customwidget.RegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/transparent_box"
+            android:text="Male"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_1dp"
+        android:background="@color/border_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/calender"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+        <com.mobile.masfat.customwidget.RegularTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/transparent_box"
+            android:text="18/18/1989"
+            android:textSize="@dimen/dim_15sp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_1dp"
+        android:background="@color/border_gray"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/prof"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+        <com.mobile.masfat.customwidget.RegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/transparent_box"
+            android:text="IT Manager"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_1dp"
+        android:background="@color/border_gray"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/prof"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+        <com.mobile.masfat.customwidget.RegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim_60dp"
+            android:background="@drawable/transparent_box"
+            android:text="Main market Salmiya, Kuway\n 65433"
+            android:layout_marginLeft="@dimen/dim_10dp"/>
+    </LinearLayout>
+
+    <com.mobile.masfat.customwidget.BoldButton
+        android:id="@+id/btn_edit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_45dp"
+        android:background="@drawable/btn_orange_bg"
+        android:layout_marginLeft="@dimen/dim_35dp"
+        android:layout_marginRight="@dimen/dim_35dp"
+        android:layout_marginTop="@dimen/dim_30dp"
+        android:textColor="@color/white"
+        android:text="@string/edit_info"
+        android:textSize="@dimen/dim_16sp"
+        android:textAllCaps="false"
+        android:gravity="center"/>
+</LinearLayout>
