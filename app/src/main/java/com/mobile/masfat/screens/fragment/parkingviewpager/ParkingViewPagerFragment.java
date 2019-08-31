@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.mobile.masfat.R;
+import com.mobile.masfat.baseactivity.BaseActivity;
 import com.mobile.masfat.customwidget.RegularEditText;
 
 import butterknife.BindView;
@@ -33,6 +34,12 @@ public class ParkingViewPagerFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        BaseActivity baseActivity = (BaseActivity) getActivity();
+        baseActivity.setHeaderTitle(getString(R.string.list_view_parking));
+    }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcv_shared_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dim_10dp"
+                    android:layout_marginRight="@dimen/dim_10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2">
+
+                <com.mobile.masfat.customwidget.RegularButton
+                    android:id="@+id/btn_my_acc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dim_45dp"
+                    android:background="@drawable/btn_orange_bg"
+                    android:layout_marginLeft="@dimen/dim_35dp"
+                    android:layout_marginRight="@dimen/dim_35dp"
+                    android:textColor="@color/white"
+                    android:text="@string/goto_my_account"
+                    android:textSize="@dimen/dim_16sp"
+                    android:textAllCaps="false"
+                    android:gravity="center"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

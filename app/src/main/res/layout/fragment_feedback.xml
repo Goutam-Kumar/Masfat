@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:padding="@dimen/dim_20dp"
+    android:gravity="center_horizontal">
+
+    <com.mobile.masfat.customwidget.BoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dim_20sp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/feedback"
+        android:textAllCaps="true"
+        android:gravity="center_horizontal"/>
+
+    <com.mobile.masfat.customwidget.RegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dim_15sp"
+        android:textColor="@android:color/darker_gray"
+        android:text="Lorem Ipsum is simply dummy text of the printing"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dim_10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dim_20dp">
+            <ImageView
+                android:layout_width="@dimen/dim_30dp"
+                android:layout_height="@dimen/dim_30dp"
+                android:src="@drawable/user_ic"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_10dp"
+            android:orientation="vertical">
+            <com.mobile.masfat.customwidget.RegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textSize="@dimen/dim_16sp"
+                android:textColor="@color/black"/>
+
+            <com.mobile.masfat.customwidget.RegularEditText
+                android:id="@+id/txt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/dim_14sp"
+                android:padding="@dimen/dim_5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dim_20dp">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/msg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_10dp"
+            android:orientation="vertical">
+            <com.mobile.masfat.customwidget.RegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textSize="@dimen/dim_16sp"
+                android:textColor="@color/black"/>
+
+            <com.mobile.masfat.customwidget.RegularEditText
+                android:id="@+id/txt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/dim_14sp"
+                android:padding="@dimen/dim_5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dim_20dp">
+        <ImageView
+            android:layout_width="@dimen/dim_30dp"
+            android:layout_height="@dimen/dim_30dp"
+            android:src="@drawable/chat"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dim_10dp"
+            android:orientation="vertical">
+            <com.mobile.masfat.customwidget.RegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message"
+                android:textSize="@dimen/dim_16sp"
+                android:textColor="@color/black"/>
+
+            <com.mobile.masfat.customwidget.RegularEditText
+                android:id="@+id/txt_msg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_100dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/dim_14sp"
+                android:gravity="top|left"
+                android:padding="@dimen/dim_5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.mobile.masfat.customwidget.BoldButton
+        android:id="@+id/btn_send"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_45dp"
+        android:background="@drawable/btn_blue_bg"
+        android:layout_margin="@dimen/dim_20dp"
+        android:textColor="@color/white"
+        android:text="@string/send"
+        android:textSize="@dimen/dim_16sp"
+        android:textAllCaps="false"
+        android:gravity="center"/>
+</LinearLayout>

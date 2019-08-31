@@ -37,4 +37,10 @@
     <dimen name="dim_13sp">13sp</dimen>
     <dimen name="dim_20sp">20sp</dimen>
     <dimen name="dim_55dp">55dp</dimen>
+    <dimen name="dim_14sp">14sp</dimen>
+    <dimen name="dim_230dp">230dp</dimen>
+    <dimen name="dim_350dp">350dp</dimen>
+    <dimen name="dim_340dp">340dp</dimen>
+    <dimen name="dim_320dp">320dp</dimen>
+    <dimen name="dim_330dp">330dp</dimen>
 </resources>

@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.mobile.masfat.R;
 import com.mobile.masfat.baseactivity.BaseActivity;
 import com.mobile.masfat.customwidget.RegularEditText;
+import com.mobile.masfat.screens.fragment.mapview.MapViewFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,6 +44,12 @@ public class ListFragment extends Fragment {
         listFragmentAdapter = new ListFragmentAdapter(getActivity());
         rcvListParking.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
         rcvListParking.setAdapter(listFragmentAdapter);
+        imgMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((BaseActivity) getActivity()).replaceFragmentWithOutStack(new MapViewFragment(),getString(R.string.get_direction));
+            }
+        });
     }
 
     @Override

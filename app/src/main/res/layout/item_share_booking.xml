@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim_10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="@dimen/dim_1dp"
+        app:cardCornerRadius="@dimen/dim_10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dim_20dp">
+
+            <CheckBox
+                android:id="@+id/chk_parking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/custom_check_box"
+                android:checked="false"/>
+            
+            <com.mobile.masfat.customwidget.BoldTextView
+                android:id="@+id/txt_name"
+                android:layout_width="@dimen/dim_200dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dim_15sp"
+                android:textColor="@color/black"
+                android:text="John Doe"
+                android:layout_marginLeft="@dimen/dim_20dp"/>
+
+            <com.mobile.masfat.customwidget.BoldButton
+                android:id="@+id/btn_share"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim_45dp"
+                android:layout_marginLeft="@dimen/dim_10dp"
+                android:background="@drawable/btn_blue_bg"
+                android:textColor="@color/white"
+                android:text="@string/share"
+                android:textSize="@dimen/dim_16sp"
+                android:textAllCaps="true"
+                android:gravity="center"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</LinearLayout>

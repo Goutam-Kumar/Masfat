@@ -2,16 +2,28 @@ package com.mobile.masfat.apphelper;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.app.AlertDialog;
 
+import com.mobile.masfat.R;
 import com.mobile.masfat.screens.login.LoginActivity;
+
+import java.util.Random;
 
 public class AppHelper {
 
@@ -242,6 +254,28 @@ public class AppHelper {
         final Drawable draw=new BitmapDrawable(context.getResources(),fast);
         alert.getWindow().setBackgroundDrawable(draw);
         return alert;
+    }
+
+    public static float getRandomFloat(){
+        return new Random().nextFloat();
+    }
+
+    public static Bitmap createCustomMarker(Context context, @DrawableRes int resource, String _name) {
+        View marker = ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.custom_marker_layout, null);
+        ImageView markerImage = (ImageView) marker.findViewById(R.id.marker_image);
+        markerImage.setImageResource(resource);
+        TextView txt_name = (TextView) marker.findViewById(R.id.name);
+        txt_name.setText(_name);
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        marker.setLayoutParams(new ViewGroup.LayoutParams(52, ViewGroup.LayoutParams.WRAP_CONTENT));
+        marker.measure(displayMetrics.widthPixels, displayMetrics.heightPixels);
+        marker.layout(0, 0, displayMetrics.widthPixels, displayMetrics.heightPixels);
+        marker.buildDrawingCache();
+        Bitmap bitmap = Bitmap.createBitmap(marker.getMeasuredWidth(), marker.getMeasuredHeight(), Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        marker.draw(canvas);
+        return bitmap;
     }
 
 }

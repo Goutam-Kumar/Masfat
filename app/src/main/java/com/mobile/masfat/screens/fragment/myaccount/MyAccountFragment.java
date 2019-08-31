@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.mobile.masfat.R;
 import com.mobile.masfat.baseactivity.BaseActivity;
+import com.mobile.masfat.screens.fragment.sharebooking.ShareBookingFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,8 +42,32 @@ public class MyAccountFragment extends Fragment {
         linPersonalInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BaseActivity baseActivity = new BaseActivity();
+                BaseActivity baseActivity = (BaseActivity) getActivity();
                 baseActivity.replaceFragmentWithStack(new PersonalInfoFragment(),getString(R.string.personal_info));
+            }
+        });
+
+        linAccInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseActivity baseActivity = (BaseActivity) getActivity();
+                baseActivity.replaceFragmentWithStack(new AccountInfoFragment(),getString(R.string.account_info));
+            }
+        });
+
+        linTopUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseActivity baseActivity = (BaseActivity) getActivity();
+                baseActivity.replaceFragmentWithStack(new TopupFragment(),getString(R.string.top_up));
+            }
+        });
+
+        linBookingHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseActivity baseActivity = (BaseActivity) getActivity();
+                baseActivity.replaceFragmentWithStack(new ShareBookingFragment(),getString(R.string.share_booking));
             }
         });
     }

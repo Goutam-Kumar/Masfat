@@ -16,9 +16,13 @@ import androidx.fragment.app.Fragment;
 
 import com.mobile.masfat.R;
 import com.mobile.masfat.apphelper.AppHelper;
+import com.mobile.masfat.baseactivity.BaseActivity;
 import com.mobile.masfat.customwidget.BoldButton;
 import com.mobile.masfat.customwidget.BoldTextView;
 import com.mobile.masfat.customwidget.RegularTextView;
+import com.mobile.masfat.screens.fragment.facilities.FacilitiesFragment;
+import com.mobile.masfat.screens.fragment.mapview.MapViewFragment;
+import com.mobile.masfat.screens.fragment.parkingbooking.ParkingBookingFragment;
 import com.mobile.masfat.utils.CommonUtil;
 
 import butterknife.BindView;
@@ -61,12 +65,23 @@ public class ParkingPagerFragment extends Fragment {
         btnMoreInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LayoutInflater factory = LayoutInflater.from(getActivity());
-                final View customDialog = factory.inflate(R.layout.dlg_change_password_notification, null);
-                AlertDialog.Builder builder=new AlertDialog.Builder(getActivity(),R.style.Theme_D1NoTitleDim);
-                builder.setView(customDialog);
-                AlertDialog alert= AppHelper.blurBehindAlertDlg(getActivity(),builder);
-                alert.show();
+                BaseActivity baseActivity = (BaseActivity) getActivity();
+                baseActivity.replaceFragmentWithStack(new FacilitiesFragment(),getString(R.string.facilities));
+            }
+        });
+
+        linMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BaseActivity baseActivity = (BaseActivity) getActivity();
+                baseActivity.replaceFragmentWithStack(new MapViewFragment(),getString(R.string.get_direction));
+            }
+        });
+
+        imgParking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((BaseActivity) getActivity()).replaceFragmentWithStack(new ParkingBookingFragment(),getString(R.string.parking_booking));
             }
         });
     }

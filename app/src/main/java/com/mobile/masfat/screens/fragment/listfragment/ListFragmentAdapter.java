@@ -13,6 +13,7 @@ import com.mobile.masfat.R;
 import com.mobile.masfat.baseactivity.BaseActivity;
 import com.mobile.masfat.customwidget.BoldTextView;
 import com.mobile.masfat.screens.fragment.facilities.FacilitiesFragment;
+import com.mobile.masfat.screens.fragment.parkingbooking.ParkingBookingFragment;
 import com.mobile.masfat.screens.fragment.parkingviewpager.ParkingViewPagerFragment;
 import com.mobile.masfat.utils.CommonUtil;
 
@@ -50,8 +51,7 @@ public class ListFragmentAdapter extends RecyclerView.Adapter<ListFragmentAdapte
         holder.imgParking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BaseActivity baseActivity = (BaseActivity) context;
-                baseActivity.replaceFragmentWithStack(new ParkingViewPagerFragment(),context.getString(R.string.list_view_parking));
+                ((BaseActivity) context).replaceFragmentWithStack(new ParkingBookingFragment(),context.getString(R.string.parking_booking));
             }
         });
     }

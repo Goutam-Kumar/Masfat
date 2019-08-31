@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="@dimen/dim_10dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="@dimen/dim_15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim_10dp"
+                android:weightSum="1">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <com.mobile.masfat.customwidget.RegularTextView
+                            android:id="@+id/txt_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dim_13sp"
+                            android:drawableLeft="@drawable/ic_clock"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:drawablePadding="@dimen/dim_5dp"/>
+                        <com.mobile.masfat.customwidget.RegularTextView
+                            android:id="@+id/txt_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dim_15sp"
+                            android:textColor="@color/black"/>
+
+                        <com.mobile.masfat.customwidget.RegularTextView
+                            android:id="@+id/txt_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/dim_12sp"
+                            android:textColor="@android:color/darker_gray"/>
+
+                    </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>
